@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  transition: background 0.3s linear;
+  color: #292C35;
+}
+p {
+  margin: 30px;
+}
+body.dark {
+  background-color: #292C35;
+  color: #F1F1F1;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute
+}
+
+.label {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  border-radius: 50px;
+  height: 26px;
+  width: 60px;
+  padding: 5px;
+  padding-bottom: 2px;
+  transform: scale(5);
+}
+
+.ball {
+  background: #F1F1F1;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 4px;
+  height: 23px;
+  width: 23px;
+  transition: transform 0.2s linear;
+  
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(28px);
+}
